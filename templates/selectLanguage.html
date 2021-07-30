@@ -1,0 +1,30 @@
+<html>
+   <body>
+	{% if succcessFlag %}
+		<h1 style="color:green">{{ succcessFlag }}</h1>
+	{% endif %}
+	{% if fileName %}
+		<p style="font-size: 22px">File name : <b>{{ fileName }}</b> , stored in 'translatedFiles' folder</p>
+	{% endif %}
+      <form action = "http://localhost:5000/result" method = "POST">
+      	<label>Select File:</label>
+      	<input type="file" id="fileToTranslate" name="fileToTranslate">
+      	<label>Language To be translated:</label>
+      	<select name="transToLang">
+			<option value="hi">HINDI</option>
+			<option value="es">SPANISH</option>
+			<option value="ar">ARABIC</option>
+			<option value="pt">PORTUGUESE</option>
+			<option value="ru">RUSSIAN</option>
+			<option value="ja">JAPANESE</option>
+			<option value="jw">JAVANESE</option>
+			<option value="de">GERMAN</option>
+			<option value="ko">KOREAN</option>
+			<option value="fr">FRENCH</option>
+			<option value="tr">TURKISH</option>
+			<!-- <option value="en">English</option> -->
+		</select>
+		<input type="submit" value="submit">
+      </form>
+   </body>
+</html>
